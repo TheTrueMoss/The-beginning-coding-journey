@@ -1,5 +1,4 @@
 <xml>
-<traders> 
         <removeattribute xpath="/traders/trader_info[@id='1']/@open_time" />
         <removeattribute xpath="/traders/trader_info[@id='1']/@close_time" />
 
@@ -14,39 +13,5 @@
         
         <removeattribute xpath="/traders/trader_info[@id='8']/@open_time" />
         <removeattribute xpath="/traders/trader_info[@id='8']/@close_time" />
-        
-        <!--
-	<trader_info id="2" min_inventory="30" max_inventory="70" min_items_swapped="20" max_items_swapped="20"
-		reset_interval="1" open_time="1:00" close_time="00:59">
-		<trader_items count="all">
-			<item group="traderAlways"/>
-			<item group="traderGeneral" count="4,8"/>
-			<item group="generalResources" count="11,17"/>
-			<item group="constructionSupplies" count="4,12"/>
-			<item group="decorativeBlocks" count="2,7"/>
-			<item group="tools" count="0,2"/>
-			<item group="groupArmorLightMixed" count="1,3"/>
-			<item group="traderElectrical" count="0,1"/>
-</traders>
+
 </xml>
-
-<! -- this is in the original folder of the game 
-
-<!--
-This is the original other then me swapping the reset interval to 1. 
-
-	<trader_info id="2" min_inventory="30" max_inventory="70" min_items_swapped="20" max_items_swapped="20"
-		reset_interval="3" open_time="6:05" close_time="21:50">
-		<trader_items count="all">
-			<item group="traderAlways"/>
-			<item group="traderGeneral" count="4,8"/>
-			<item group="generalResources" count="11,17"/>
-			<item group="constructionSupplies" count="4,12"/>
-			<item group="decorativeBlocks" count="2,7"/>
-			<item group="tools" count="0,2"/>
-			<item group="groupArmorLightMixed" count="1,3"/>
-			<item group="traderElectrical" count="0,1"/>
-
-switched value of reset_interval="1"  from 3.
-also switched my trader time ?? from 12:59 to 1 am open and close time... maybe this is how its coded.?
--->
