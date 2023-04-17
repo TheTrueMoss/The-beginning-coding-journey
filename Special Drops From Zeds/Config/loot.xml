@@ -1,0 +1,162 @@
+<configs>
+
+<!--
+Label file loot .xml
+-->
+
+<!-- ask morpheus about how to do the healing bedrolls later -->
+
+<!-- Template for Items -->
+
+<!-- 		<item name="Green Tea" count="1,5" loot_prob_template="veryLow" />           	-->
+
+<!-- 
+Weapon Gun Mods
+
+<item name="modGunFlashlight"/>
+	<item name="modGunLaserSight"/>
+	<item name="modGunReflexSight"/>
+	<item name="modGunSoundSuppressorSilencer"/>
+	<item name="modGunDrumMagazineExtender" loot_prob_template="low"/>
+	
+-->
+
+	
+<!-- adds the chance of finding a silencer on ANY pistol found during gameplay. -->
+<setattribute xpath="//item[@name='gunHandgunT1Pistol'] name= "mods"> modGunSoundSuppressorSilencer</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT1Pistol'] name= "mod_chance">0.3</setattribute>
+
+
+<!-- adds the chance of finding ANY AK47 with reflex sight,lazer sight or a suppressor on it -->
+<setattribute xpath="//item[@name='gunMGT1AK47'] name= "mods"> modGunLaserSight</setattribute>
+<setattribute xpath="//item[@name='gunMGT1AK47'] name= "mods"> modGunReflexSight</setattribute>
+<setattribute xpath="//item[@name='gunMGT1AK47'] name= "mods"> modGunSoundSuppressorSilencer</setattribute>
+<setattribute xpath="//item[@name='gunMGT1AK47'] name= "mod_chance">0.3</setattribute>
+
+<!-- adds the chance of finding ANY m4a1 ( tactical MG ) with a relex sight ,lazer sight or suppressor ingame -->
+<!-- <item name="gunMGT2TacticalAR"/> (for the M4 series weapon) --> 
+
+<setattribute xpath="//item[@name='gunMGT2TacticalAR'] name= "mods"> modGunReflexSight</setattribute>
+<setattribute xpath="//item[@name='gunMGT2TacticalAR'] name= "mods"> modGunLaserSight</setattribute>
+<setattribute xpath="//item[@name='gunMGT2TacticalAR'] name= "mods"> modGunSoundSuppressorSilencer</setattribute>
+<setattribute xpath="//item[@name='gunMGT2TacticalAR'] name= "mod_chance">0.3</setattribute>
+
+
+<!-- Zombie Cops -->
+
+<!-- zombie cops will all have a 50% chance to drop a coffee on death and 100% chance to drop a pistol on death . 
+The 3 differant zombie cops are zombieFatCop,zombieFatCopFeral And zombieFatCopRadiated        
+<item name="drinkJarCoffee">                        0.5% chance for cofee
+<item name="modGunSoundSuppressorSilencer"/>        0.05% chance for pistol suppressor
+<item name =gunHandgunT1Pistol/>                    100% chance for m9 pistol 
+
+  --> 
+
+<!-- zombie fat cop (normal) (zombieFatCop) -->
+     <lootgroup name="zombieFatCop">
+        <item name ="drinkJarCoffee" count="1" prob= "1">
+        <item name="modGunSoundSuppressorSilencer" prob="0.05"/>
+        <item name ="gunHandgunT1Pistol" count="1" prob="1"/>
+        <item name="ammo9mmBulletBall" count="10,20" prob=".20"/>
+        <item name="ammo9mmBulletAP" count="30,90" prob=".1"/>
+
+
+<!-- zombie fat cop (feral) (zombieFatCopFeral) -->
+ <lootgroup name="zombieFatCopFeral">
+        <item name ="drinkJarCoffee" count="1" prob= "1">
+        <item name="modGunSoundSuppressorSilencer" prob="0.05"/>
+        <item name ="gunHandgunT1Pistol" count="1" prob="1"/>
+        <item name="ammo9mmBulletBall" count="10,20" prob=".25"/>
+        <item name="ammo9mmBulletAP" count="30,90" prob=".1"/>
+
+<!-- zombie fat cop (radiated) (zombieFatCopRadiated) -->
+ <lootgroup name="zombieFatCopRadiated">
+        <item name ="drinkJarCoffee" count="1" prob= "1">
+        <item name="modGunSoundSuppressorSilencer" prob="0.05"/>
+        <item name ="gunHandgunT1Pistol" count="1" prob="1"/>
+        <item name="ammo9mmBulletBall" count="10,20" prob=".3"/>
+        <item name="ammo9mmBulletAP" count="30,90" prob=".1"/>
+
+
+<!-- I stole these 2 loot configs from you after realizing i should of just looked at your loot.xml first.  -->
+
+<!-- (morpheus) Soldier corpse loot -->
+		<lootgroup name="lootBagSoldier">
+            <item name='gunMGT1AK47' prob=".3"/>
+			<item name="gunShotgunT2PumpShotgun" prob=".3"/>
+			<item name="gunHandgunT1Pistol"  prob=".05"/>
+			<item name="gunHandgunT3SMG5"  prob=".01"/>
+			<item name="gunMGT2TacticalAR"   prob=".4"/>
+			
+			<item name="thrownGrenadeContact" count="1,3" prob=".1"/>
+			<item name="thrownGrenade" count="1,3" prob=".1"/>
+			
+			<item name="ammoShotgunShell" count="8,16" prob=".1"/>
+			<item name="ammo9mmBulletAP" count="30,90" prob=".1"/>
+			<item name="ammo762mmBulletAP" count="30,90" prob=".3"/>
+			
+			<item name="resourceBulletCasing" count="10,30" prob=".18"/>
+		</lootgroup>
+
+<!-- adding another group for Feral ZOMBIE soldiers-->
+    <lootgroup name="zombieSoldierFeral">
+            <item name='gunMGT1AK47' prob=".3"/>
+			<item name="gunShotgunT2PumpShotgun" prob=".3"/>
+			<item name="gunHandgunT1Pistol"  prob=".05"/>
+			<item name="gunHandgunT3SMG5"  prob=".01"/>
+			<item name="gunMGT2TacticalAR"   prob=".4"/>
+			
+			<item name="thrownGrenadeContact" count="1,3" prob=".1"/>
+			<item name="thrownGrenade" count="1,3" prob=".1"/>
+			
+			<item name="ammoShotgunShell" count="8,16" prob=".1"/>
+			<item name="ammo9mmBulletAP" count="30,90" prob=".1"/>
+			<item name="ammo762mmBulletAP" count="30,90" prob=".3"/>
+			
+			<item name="resourceBulletCasing" count="10,30" prob=".18"/>
+		</lootgroup> 
+            
+
+<!-- INSERTING ANOTHER GROUP FOR RADIATED ZOMBIE SOLDIERS-->        
+            
+     <lootgroup name="zombieSoldierRadiated">
+             <item name='gunMGT1AK47' prob=".3"/>
+			<item name="gunShotgunT2PumpShotgun" prob=".3"/>
+			<item name="gunHandgunT1Pistol"  prob=".05"/>
+			<item name="gunHandgunT3SMG5"  prob=".01"/>
+			<item name="gunMGT2TacticalAR"   prob=".4"/>
+			
+			<item name="thrownGrenadeContact" count="1,3" prob=".1"/>
+			<item name="thrownGrenade" count="1,3" prob=".1"/>
+			
+			<item name="ammoShotgunShell" count="8,16" prob=".1"/>
+			<item name="ammo9mmBulletAP" count="30,90" prob=".1"/>
+			<item name="ammo762mmBulletAP" count="30,90" prob=".3"/>
+			
+			<item name="resourceBulletCasing" count="10,30" prob=".18"/>
+
+
+		
+<!-- (morpheus) Hazmat corpse loot -->
+		<lootgroup name="lootBagHazmatOperator">
+			<item name="apparelHazmatMask" prob=".09"/>
+			<item name="apparelHazmatJacket" prob=".09"/>
+			<item name="apparelHazmatGloves" prob=".09"/>
+			<item name="apparelHazmatPants" prob=".09"/>
+			<item name="apparelHazmatBoots" prob=".09"/>
+			<item name="apparelNerdGlasses" prob=".02"/>
+			
+			<item name="meleeWpnBatonT2StunBaton" prob=".04"/>
+			
+			<item name="gunHandgunT1Pistol"  prob=".05"/>
+			<item name="gunHandgunT3SMG5"  prob=".01"/>
+            <item name='gunMGT1AK47' prob=".3"/>
+            <item name="ammo762mmBulletAP" count="30,90" prob=".3"/>
+					
+			<item name="ammo9mmBulletBall" count="10,20" prob=".15"/>
+			<item name="resourceBulletCasing" count="10,30" prob=".12"/>
+		</lootgroup>
+		
+		
+				
+</configs>
